@@ -1,0 +1,8 @@
+{
+  "name": "webcomponents-slides",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:twojtylak/web-components-slides.git",
+  "author": "twojtylak <tobias.wojtylak@googlemail.com>",
+  "license": "MIT"
+}
