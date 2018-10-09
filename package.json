@@ -4,5 +4,8 @@
   "main": "index.js",
   "repository": "git@github.com:twojtylak/web-components-slides.git",
   "author": "twojtylak <tobias.wojtylak@googlemail.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "impress.js": "^1.0.0"
+  }
 }
