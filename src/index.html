@@ -296,18 +296,46 @@
         </code></pre>
         <p>Element is geschützt</p>
       </div>
-
     </div>
+    <div class="step slide" data-x="2020" data-y="700" data-rotate="720" data-transition-duration="2000">
+      <h1>HTML Templates</h1>
 
-    <!--
-        This step also sets a custom data-transition-duration. All of the above steps used the value set
-        in the root div#impress element, but it is also allowed to set it for each step. Since transitioning
-        to this step will rotate twice around it's axis, we give the transition a bit more time here.
-    -->
-    <div id="moreinfo" class="step slide" data-x="2020" data-y="700" data-rotate="720" data-transition-duration="2000">
-      <h1>Beispiel</h1>
-      <hello-world></hello-world>
+      <div class="row">
+        <div class="col">
+          <img src="https://placeimg.com/100/100/sport" style="width: 50px;">
+        </div>
+        <div class="col">
+          <button id="image-button" onclick="showImage()">Show Image</button>
+          <div class="placeholder"></div>
+          <template id="template">
+            <img src="https://placeimg.com/100/100/any" style="width: 50px;">
+          </template>
+        </div>
 
+      </div>
+      <pre><code class="html">
+          &lt;img src=&quot;assets/images/code.svg&quot; style=&quot;width: 50px;&quot;&gt;
+      </code></pre>
+
+      <pre><code class="html">
+        &lt;template&gt;
+          &lt;img src=&quot;assets/images/code.svg&quot; style=&quot;width: 50px;&quot;&gt;
+        &lt;/template&gt;
+      </code></pre>
+      
+      <pre><code class="javacript">
+         const template = document.querySelector('#template');
+         const clone = document.importNode(template.content, true);
+        document.querySelector('.placeholder').appendChild(clone);
+      </code></pre>
+
+      <script type="text/javascript">
+        function showImage() {
+          const template = document.querySelector('#template');
+          const clone = document.importNode(template.content, true);
+          document.querySelector('.placeholder').appendChild(clone);
+        }
+      </script>
     </div>
 
     <!-- This last, empty "slide" is set to be very large using the data-scale attribute,
