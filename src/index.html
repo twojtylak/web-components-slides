@@ -283,6 +283,20 @@
     <div class="step slide" data-rel-x="-1100" data-rel-y="300" data-rotate="180">
       <h1>Beispiel</h1>
       <hello-world></hello-world>
+      <div class="substep">
+        <pre><code class="javascript">
+          class MySuperComponent extends HTMLElement {
+
+            constructor() {
+              this.attachShadow({ 'mode': 'open' }); // accessible from outside yes: open
+            }
+            render() {
+              this.shadowRoot.innerHtml = 'Hello World';
+            }
+           }
+        </code></pre>
+      </div>
+
     </div>
 
     <!--
@@ -293,6 +307,7 @@
     <div id="moreinfo" class="step slide" data-x="2020" data-y="700" data-rotate="720" data-transition-duration="2000">
       <h1>Beispiel</h1>
       <hello-world></hello-world>
+
     </div>
 
     <!-- This last, empty "slide" is set to be very large using the data-scale attribute,
