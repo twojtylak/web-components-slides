@@ -3,88 +3,26 @@
 <head>
     <meta charset="utf-8" />
     <title>
-        Web Components | by Tobias Wojtylak</title>
+        Web Components | sdAcademy</title>
 
     <meta name="description" content="Web components" />
     <meta name="author" content="Tobias Wojtylak" />
-    <!--
-        Impress.js doesn't depend on any external stylesheets. It adds all of the styles it needs for the
-        presentation to work.
 
-        However, some of the `extras/` modules do come with their own CSS, and we load
-        them here. You can read about each extras module separately in their directory.
-    -->
     <link rel="stylesheet" href="lib/highlight.js/styles/github.css">
-
-    <!--
-        This file contains styles specific for this example presentation.
-    -->
     <link href="assets/css/classic-slides.css" rel="stylesheet" />
 
 </head>
 
-<!--
-
-    Body element is used by impress.js to set some useful class names, that will allow you to detect
-    the support and state of the presentation in CSS or other scripts.
-
-    First very useful class name is `impress-not-supported`. This class means, that browser doesn't
-    support features required by impress.js, so you should apply some fallback styles in your CSS.
-    It's not necessary to add it manually on this element. If the script detects that browser is not
-    good enough it will add this class, but keeping it in HTML means that users without JavaScript
-    will also get fallback styles.
-
-    When impress.js script detects that browser supports all required features, this class name will
-    be removed.
-
-    Another class name on body element also depends on currently active presentation step.
--->
 <body class="impress-not-supported">
-<!--
-    This fallback message is only visible when there is `impress-not-supported` class on body.
--->
 <div class="fallback-message">
     <p>Your browser <b>doesn't support the features required</b> by impress.js, so you are presented with a simplified version of this presentation.</p>
     <p>For the best experience please use the latest <b>Chrome</b>, <b>Safari</b> or <b>Firefox</b> browser.</p>
 </div>
 
-<!--
-    This is the core element used by impress.js: the wrapper for your presentation steps.
-    In this element all the impress.js magic happens.
-
-    data-transition-duration sets the time in microseconds that is used for the
-    animation when transtitioning between slides.
-
-    data-autoplay can be used to set the time in seconds, after which presentation
-    automatically moves to next slide. It can also be set individually for each
-    slide, but here we just set a common duration for all slides.
--->
 <div id="impress" data-transition-duration="1000">
 
-    <!--
-        Each step of the presentation should be an element inside the `#impress` with a class name
-        of `step`. These step elements are positioned, rotated and scaled by impress.js, and
-        the 'camera' shows them on each step of the presentation.
-
-        The `id` attribute of the step element is used to identify it in the URL, but it's optional.
-        If it is not defined, it will get a default value of `step-N` where N is a number of slide.
-        This step is auto-assigned the id "step-1". You can also use `#step-1` in a link, to
-        point directly to this particular step.
-
-        Positioning information is passed through data-* attributes.
-
-        In the example below we only specify x and y position of the step element with `data-x="-1000"`
-        and `data-y="-1500"` attributes. This means that **the center** of the element (yes, the center)
-        will be positioned in point x = -1000px and y = -1500px of the presentation 'canvas'. It will not
-        be rotated or scaled.
-
-        The "step" class is what *must* be used for every "slide". In this example we also use the "slide"
-        class, which adds a rectangle with some background and makes this presentation look like a traditional
-        powerpoint slide show. The "slide" class is entirely optional and indeed you wouldn't use it for
-        your cooler impress.js presentations.
-    -->
     <div class="step slide title" data-x="-1000" data-y="-1500">
-        <h1>Web Components mit Stencil.js</h1>
+        <h1>Web Components (mit Stencil.js)</h1>
         <img src="https://webcomponents.github.io/img/logo.svg">
     </div>
 
@@ -94,12 +32,9 @@
             <li><a href="#step-1">Was sind Webkomponents?</a></li>
             <li><a href="#step-2">Vorteile</a></li>
             <li><a href="#step-3">Spezifikationen</a></li>
-            <li><a href="#step-4">Bullet points</a></li>
-            <li><a href="#step-5">Blockquote &amp; image</a></li>
-            <li><a href="#step-6">More basic text styles</a></li>
-            <li><a href="#step-7">Motion effects 101</a></li>
-            <li><a href="#addons">Add-ons</a></li>
-            <li><a href="#moreinfo">More info</a></li>
+            <li><a href="#step-8">Browser Support</a></li>
+            <li><a href="#step-14">Probleme</a></li>
+            <li><a href="#step-15">Stencil.js</a></li>
         </ul>
     </div>
     <div class="step slide">
@@ -346,7 +281,7 @@
     </div>
 
     <div class="step slide" data-x="5020" data-y="900" data-rotate="720" data-transition-duration="2000">
-      <h1>Nachteile</h1>
+      <h1>Probleme</h1>
       <ul>
         <li class="substep">Manuelles Data Binding</li>
         <li class="substep">Attribute/Properties Handling ist komplex</li>
@@ -374,11 +309,6 @@
     </div>
 </div>
 
-<!--
-    Add navigation-ui controls: back, forward and a select list.
-    Add a progress indicator bar (current step / all steps)
-    Add the help popup plugin
--->
 <div id="impress-toolbar"></div>
 
 <div class="impress-progressbar"><div></div></div>
@@ -386,16 +316,7 @@
 
 <div id="impress-help"></div>
 
-<!-- Extra modules
-     Load highlight.js, mermaid.js, markdown.js and MathJax.js from extras.
-     If you're curious about details, these are initialized in src/plugins/extras/extras.js -->
 <script type="text/javascript" src="lib/highlight.js/lib/highlight.js"></script>
-
-<!--
-    To make all described above really work, you need to include impress.js in the page.
-    You also need to call a `impress().init()` function to initialize impress.js presentation.
-    And you should do it in the end of your document.
--->
 <script type="text/javascript" src="lib/impress.js/impress.js"></script>
 <script src="/build/app.js"></script>
 <script>impress().init();</script>
