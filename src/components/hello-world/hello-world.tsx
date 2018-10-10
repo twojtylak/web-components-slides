@@ -1,7 +1,8 @@
 import { Component } from "@stencil/core";
 
 @Component({
-  tag: "hello-world",
+  tag: 'hello-world',
+  styleUrl: 'hello-world.css',
   shadow: true
 })
 export class HelloWorld {

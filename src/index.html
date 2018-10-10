@@ -281,29 +281,7 @@
     </div>
 
     <div class="step slide" data-rel-x="-1100" data-rel-y="300" data-rotate="180">
-        <h1>Highlight.js</h1>
-        <pre><code>
-        // `init` API function that initializes (and runs) the presentation.
-        var init = function () {
-            if (initialized) { return; }
-            execPreInitPlugins();
-
-            // First we set up the viewport for mobile devices.
-            // For some reason iPad goes nuts when it is not done properly.
-            var meta = $("meta[name='viewport']") || document.createElement("meta");
-            meta.content = "width=device-width, minimum-scale=1, maximum-scale=1, user-scalable=no";
-            if (meta.parentNode !== document.head) {
-                meta.name = 'viewport';
-                document.head.appendChild(meta);
-            }
-        </code></pre>
-        <div class="notes">
-        <p>The Highlight.js library provides really nice color coding of source code.
-           It automatically applies to any code inside a &lt;pre&gt;&lt;code&gt; element.</p>
-        <p>Highlight.js is found under the <a href="https://github.com/impress/impress.js/tree/master/extras">extras/</a>
-           directory, since it is an independent third party plugin, not really an impress.js plugin. You have
-           to include it via it's own &lt;link&gt; and &lt;script&gt; tags.</p>
-        </div>
+      <hello-world></hello-world>
     </div>
 
     <!--
@@ -312,28 +290,7 @@
         to this step will rotate twice around it's axis, we give the transition a bit more time here.
     -->
     <div id="moreinfo" class="step slide" data-x="2020" data-y="700" data-rotate="720" data-transition-duration="2000">
-        <h1>More info</h1>
-        <ul>
-        <li><a href="https://github.com/impress/impress.js/blob/master/DOCUMENTATION.md">DOCUMENTATION.md</a> is the API reference.
-        </li>
-        <li><a href="https://github.com/impress/impress.js/blob/master/examples/classic-slides/index.html">Source of this presentation itself</a> is commented</li>
-        <li><a href="http://impress.github.io/impress.js/">Advanced Impress.js demo</a> by <a href="http://twitter.com/bartaz">@bartaz</a>
-            <ul>
-            <li>Again, the <a href="http://github.com/impress/impress.js/blob/master/index.html">html</a>
-                and <a href="https://github.com/impress/impress.js/blob/master/css/impress-demo.css">css</a> source is well commented.</li>
-            </ul>
-        </li>
-        <li>More examples and demos:
-            <ul>
-            <li><a href="https://github.com/impress/impress.js/tree/master/examples">examples/</a> in this repository</li>
-            <li><a href="https://github.com/impress/impress.js/wiki/Examples-and-demos">on the impress.js wiki</a></li>
-            </ul>
-        </li>
-        <li>Check out <a href="https://github.com/impress/impressionist">Impressionist</a>: a 3D GUI to create impress.js presentations</li>
-        </ul>
-
-        <div class="notes">
-        </div>
+      <hello-world></hello-world>
     </div>
 
     <!-- This last, empty "slide" is set to be very large using the data-scale attribute,
