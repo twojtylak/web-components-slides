@@ -148,53 +148,48 @@
             Html Templates
           </div>
         </div>
-  </div>
+    </div>
 
-  <div class="step slide">
-    <h1>Creating a custom element</h1>
+    <div class="step slide">
+      <h1>Creating a custom element</h1>
 
-    <div class="substep">
-        <pre><code class="javascript">
-            class MySuperComponent extends HTMLElement {
-              constructor() {
-                super
+      <div class="substep">
+          <pre><code class="javascript">
+              class MySuperComponent extends HTMLElement {
+                constructor() {
+                  super
+                }
               }
-            }
-        </code></pre>
+          </code></pre>
+      </div>
+
+      <div class="substep">
+          <pre><code class="javascript">
+              window.customElements.
+                .define('my-super-component', MySuperComponent);
+          </code></pre>
+      </div>
+      <div class="substep">
+          <pre><code class="javascript">
+              &lt;my-super-component&gt;&lt;/my-super-component&gt;
+          </code></pre>
+      </div>
+
     </div>
 
-    <div class="substep">
-        <pre><code class="javascript">
-            window.customElements.
-              .define('my-super-component', MySuperComponent);
-        </code></pre>
-    </div>
-    <div class="substep">
-        <pre><code class="javascript">
-            &lt;my-super-component&gt;&lt;/my-super-component&gt;
-        </code></pre>
-    </div>
-
-  </div>
-
-    <!--
-        This element introduces rotation.
-
-        Notation shouldn't be a surprise. We use `data-rotate="30"` attribute, meaning that this
-        element should be rotated by 30 degrees clockwise.
-    -->
     <div class="step slide" data-rel-x="1100" data-rel-y="300" data-rotate="30">
-        <h1>A blockquote &amp; image</h1>
-        <img src="images/3476636111_c551295ca4_b.jpg"
-             alt="Mother Teresa holding a newborn baby"
-             class="right"/>
-        <blockquote>
-        Spread love everywhere you go. <br />Let no one ever come to you without leaving happier.
-        <p style="text-align: right">Mother Teresa</p>
-        <p class="left bottom"><small>Image credit: <a href="https://www.flickr.com/photos/peta-de-aztlan/3476636111/">Peta_de_Aztlan</a>@Flickr. CC-BY 2.0</small></p>
-        </blockquote>
-
-        <div class="notes">
+        <h1>Lifecycle Hooks</h1>
+        <div class="row substep">
+          <div class="col">connectedCallback</div>
+          <div class="col">Element wurde hinzugefügt</div>
+        </div>
+        <div class="row substep">
+          <div class="col">disconnectedCallback</div>
+          <div class="col">Element wurde entfernt</div>
+        </div>
+        <div class="row substep">
+          <div class="col">attributeChangedCallback</div>
+          <div class="col">Attribut hat sich geändert</div>
         </div>
     </div>
 
