@@ -194,20 +194,41 @@
     </div>
 
     <div class="step slide" data-rel-x="800" data-rel-y="800" data-rotate="60">
-        <h1>More text styles</h1>
-        <p>As usual, use <em>em</em> to emphasize, <br />
-           <strong>strong</strong> for strong, <u>u</u> for underline,<br />
-           <strike>strike</strike> for strikethrough and <q>q for inline quotations</q>.</p>
+        <h1>Attribute überwachen</h1>
 
-        <p>If you're a software engineer like me, you will often use the
-           <code>&lt;code&gt;</code> tag for monospaced inline text.</p>
+        <p class="substep">Nicht "out of the box".</p>
 
-        <div class="notes">
+        <div class="substep">
+            <pre><code class="javascript">
+                &lt;my-super-component text="Hello"&gt;&lt;/my-super-component&gt;
+                // Hello
+            </code></pre>
+        </div>
+        <div class="substep">
+            <pre><code class="javascript">
+                class MySuperComponent extends HTMLElement {
+                  static get observedAttributes() {
+                    return ['text']; // array of attributes
+                  }
+                  attributeChangedCallback(name, oldValue, newValue) {
+                    console.log(newValue); // called when attribute value has changed
+                  }
+                }
+            </code></pre>
+        </div>
+
+        <div class="substep">
+          Achtung: Attribute müssen immer strings sein
         </div>
     </div>
 
     <div class="step slide" data-rel-x="300" data-rel-y="1100" data-rotate="90">
-        <h1>Motion effects 101</h1>
+
+
+        <h1>Properties für komplexe Daten</h1>
+
+
+
         <p>Items on the slide can</p>
         <p class="fly-in fly-out">Fly in</p>
         <p class="fade-in fade-out" style="transition-delay: 2s">Fade in</p>
