@@ -6,6 +6,10 @@
   "author": "twojtylak <tobias.wojtylak@googlemail.com>",
   "license": "MIT",
   "dependencies": {
-    "impress.js": "^1.0.0"
+    "emoji-rain": "^1.4.0",
+    "highlight.js": "^9.12.0",
+    "impress.js": "^1.0.0",
+    "markdown": "^0.5.0",
+    "webcomponentsjs": "^1.0.2"
   }
 }
