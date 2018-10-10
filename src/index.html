@@ -252,12 +252,24 @@
         </div>
     </div>
 
-    <div id="addons" class="step slide title" data-rel-x="-300" data-rel-y="1100" data-rotate="120">
-        <h2>Add-ons</h2>
-        <div class="notes">
-        <p>This version of impress.js includes several add-ons, striving to make this a
-           full featured presentation app.</p>
+    <div class="step slide" data-rel-x="-300" data-rel-y="1100" data-rotate="120">
+        <h2>Events</h2>
+        <div class="substep">
+          <h4>Dispatch</h4>
+          <pre><code class="javascript">
+             class MySuperComponent extends HTMLElement {
+              loadedListCallback() {
+                const e = new CustomEvent('onLoadedList', {data: this._list});
+              }
+            }
+          </code></pre>
         </div>
+      <div class="substep">
+        <h4>Listen</h4>
+        <pre><code class="javascript">
+            myComponent.addEventListener('onLoadedList', (e) => console.log('Hallo', e.data));
+          </code></pre>
+      </div>
     </div>
 
     <div class="step slide" data-rel-x="-800" data-rel-y="800" data-rotate="150" data-autoplay="3">
