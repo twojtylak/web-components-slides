@@ -225,35 +225,30 @@
     <div class="step slide" data-rel-x="300" data-rel-y="1100" data-rotate="90">
 
 
-        <h1>Properties für komplexe Daten</h1>
+      <h1>Properties</h1>
+      <p>für komplexe Daten (Json Array o.ä)</p>
 
-
-
-        <p>Items on the slide can</p>
-        <p class="fly-in fly-out">Fly in</p>
-        <p class="fade-in fade-out" style="transition-delay: 2s">Fade in</p>
-        <p class="zoom-in zoom-out" style="transition-delay: 4s">And zoom in</p>
-
-        <p class="left bottom"><small>...just like in PowerPoint. Yeah, I know I'm being lame, but it was fun to learn to do this in CSS3.</small></p>
-
-        <div class="notes">
-        <p>This step here doesn't introduce anything new when it comes to data attributes, but you
-        should notice in the demo that some words of this text are being animated.
-        It's a very basic CSS transition that is applied to the elements when this step element is
-        reached.
-        </p><p>
-        At the very beginning of the presentation all step elements are given the class of `future`.
-        It means that they haven't been visited yet.
-        </p><p>
-        When the presentation moves to given step `future` is changed to `present` class name.
-        That's how animation on this step works - text moves when the step has `present` class.
-        </p><p>
-        Finally when the step is left the `present` class is removed from the element and `past`
-        class is added.
-        </p><p>
-        So basically every step element has one of three classes: `future`, `present` and `past`.
-        Only one current step has the `present` class.
-        </p>
+        <div class="substep">
+          <pre><code class="javascript">
+            class MySuperComponent extends HTMLElement {
+              constructor() {
+                this._list = [];
+              }
+              get list() {
+                return this._list;
+              }
+              set list(data) {
+                this._list = data;
+                this.innerHtml = this._list.join(','); // Update the dom e.g.
+              }
+            }
+          </code></pre>
+        </div>
+        <div class="substep">
+            <pre><code class="javascript">
+              const myComponent = document.querySelect('my-super-component');
+              myComponent.list = ['Hello', 'World']; // set list items
+            </code></pre>
         </div>
     </div>
 
