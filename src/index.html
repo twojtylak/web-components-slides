@@ -148,7 +148,34 @@
             Html Templates
           </div>
         </div>
+  </div>
+
+  <div class="step slide">
+    <h1>Creating a custom element</h1>
+
+    <div class="substep">
+        <pre><code class="javascript">
+            class MySuperComponent extends HTMLElement {
+              constructor() {
+                super
+              }
+            }
+        </code></pre>
     </div>
+
+    <div class="substep">
+        <pre><code class="javascript">
+            window.customElements.
+              .define('my-super-component', MySuperComponent);
+        </code></pre>
+    </div>
+    <div class="substep">
+        <pre><code class="javascript">
+            &lt;my-super-component&gt;&lt;/my-super-component&gt;
+        </code></pre>
+    </div>
+
+  </div>
 
     <!--
         This element introduces rotation.
