@@ -258,7 +258,7 @@
           <h4>Dispatch</h4>
           <pre><code class="javascript">
              class MySuperComponent extends HTMLElement {
-              loadedListCallback() {
+              loadedListCallback() { // e.g. called in set list items
                 const e = new CustomEvent('onLoadedList', {data: this._list});
               }
             }
