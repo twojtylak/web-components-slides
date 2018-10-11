@@ -3,12 +3,12 @@
   position: relative;
   user-select: none;
 }
-img {
+.images-diff-highlighter_container img {
   z-index: 20;
   width: auto !important;
 }
 
-img:not(:first-child) {
+.images-diff-highlighter_container img:not(:first-child) {
    position: absolute;
    top: 0;
    left: 0;
